@@ -1,24 +1,60 @@
 "use client";
 
-import HeroContent from "@/components/hero/HeroContent";
-import HeroImage from "@/components/hero/HeroImage";
+import HeroContent from "../hero/HeroContent";
+import HeroImage from "../hero/HeroImage";
+import Container from "../ui/Container";
 
 export default function Hero() {
   return (
-   <section
-  className="relative min-h-[90vh] overflow-hidden bg-[#050816] text-white flex items-center"
->
+    <section
+      id="hero"
+      className="relative min-h-screen overflow-hidden bg-[#050816] text-white flex items-center"
+    >
       {/* Background Glow */}
-      <div className="absolute top-40 left-20 w-72 h-72 bg-cyan-500/20 blur-[120px] rounded-full"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 blur-[150px] rounded-full"></div>
 
-      <div className="relative max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+      <div className="absolute inset-0 overflow-hidden">
 
-        <HeroContent />
+        <div
+          className="
+            absolute
+            top-20
+            left-20
+            w-96
+            h-96
+            rounded-full
+            bg-cyan-500/10
+            blur-[120px]
+            animate-pulse
+          "
+        />
 
-        <HeroImage />
+        <div
+          className="
+            absolute
+            bottom-10
+            right-10
+            w-[450px]
+            h-[450px]
+            rounded-full
+            bg-blue-600/10
+            blur-[150px]
+            animate-pulse
+          "
+        />
 
       </div>
+
+      <Container>
+
+        <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+
+          <HeroContent />
+
+          <HeroImage />
+
+        </div>
+
+      </Container>
 
     </section>
   );

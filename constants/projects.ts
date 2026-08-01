@@ -4,17 +4,15 @@ export const featuredProjects = [
     subtitle: "AI-powered Natural Disaster Monitoring Platform",
     image: "/images/projects/disastertrack.png",
     description:
-      "An intelligent platform for monitoring earthquakes, floods and wildfires in Morocco using Artificial Intelligence, interactive maps and real-time analytics.",
+      "AI-powered platform for monitoring earthquakes, floods and wildfires across Morocco using real-time APIs, interactive maps and intelligent risk prediction.",
     technologies: [
-      "React",
-      "Django",
-      "PostgreSQL",
-      "Docker",
-      "Kubernetes",
-      "AI",
+      "JavaScript",
+      "Python",
+      "MongoDB",
+      "Machine Learning",
+      "REST API",
     ],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/ismailouchraa/suivi-catastrophes-maroc",
   },
 
   {
@@ -22,17 +20,14 @@ export const featuredProjects = [
     subtitle: "Enterprise Resource Planning System",
     image: "/images/projects/chicken-erp.png",
     description:
-      "Complete ERP solution for poultry farm management including livestock monitoring, egg production, financial operations, contracts and analytics dashboard.",
+      "Enterprise Resource Planning solution for poultry farm management including livestock, egg production, finance, contracts and business analytics.",
     technologies: [
-      "React",
-      "Django",
-      "PostgreSQL",
-      "ERP",
-      "Dashboard",
-      "JWT",
+      "Java",
+      "Java Swing",
+      "HTML",
+      "CSS",
     ],
     github: "#",
-    demo: "#",
   },
 ];
 
@@ -41,12 +36,11 @@ export const projects = [
     title: "Course Manager",
     image: "/images/projects/course-manager.png",
     description:
-      "Full-stack web application for managing courses, students and academic records.",
+      "Full-stack web application for managing courses and students in a university environment.",
     technologies: [
-      "React",
-      "Express",
-      "Node.js",
-      "MongoDB",
+      "JavaScript",
+      "HTML",
+      "CSS",
     ],
     github: "#",
   },
@@ -55,7 +49,7 @@ export const projects = [
     title: "SysMon-cpp",
     image: "/images/projects/sysmon.png",
     description:
-      "Real-time Linux system monitor inspired by top and htop.",
+      "Linux system monitoring tool inspired by top and htop for real-time CPU, RAM and process monitoring.",
     technologies: [
       "C++",
       "Linux",
@@ -69,7 +63,7 @@ export const projects = [
     title: "University Course Website",
     image: "/images/projects/university.png",
     description:
-      "Educational platform for sharing university courses and learning resources.",
+      "University platform for organizing academic departments, modules and educational resources.",
     technologies: [
       "HTML",
       "CSS",
@@ -82,25 +76,13 @@ export const projects = [
     title: "Portfolio Website",
     image: "/images/projects/portfolio.png",
     description:
-      "Personal portfolio built with Next.js, TypeScript and Tailwind CSS.",
+      "Modern responsive portfolio built with Next.js, TypeScript, Tailwind CSS and Framer Motion.",
     technologies: [
       "Next.js",
       "TypeScript",
-      "Tailwind",
+      "Tailwind CSS",
+      "Framer Motion",
     ],
-    github: "#",
-  },
-
-  {
-    title: "EcoColis",
-    image: "/images/projects/ecocolis.png",
-    description:
-      "Collaborative parcel delivery platform connecting travelers and senders.",
-    technologies: [
-      "React",
-      "Spring Boot",
-      "PostgreSQL",
-    ],
-    github: "#",
+    github: "https://github.com/ismailouchraa/ismail-portfolio",
   },
 ];

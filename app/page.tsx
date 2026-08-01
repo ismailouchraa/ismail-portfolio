@@ -5,10 +5,16 @@ import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+import ScrollProgress from "@/components/layout/ScrollProgress";
+import TechStack from "@/components/sections/TechStack";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
+      <ScrollProgress />
       <Hero />
       <About />
       <Skills />
@@ -16,6 +22,8 @@ export default function Home() {
       <Experience />
       <Education />
       <Contact />
+      <Footer />
+      <TechStack />
     </>
   );
 }
