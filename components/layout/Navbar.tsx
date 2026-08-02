@@ -3,14 +3,13 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const links = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -87,22 +86,17 @@ export default function Navbar() {
               >
                 {link.name}
 
-                <span
-                  className={`
-                  absolute
-                  left-0
-                  -bottom-2
-                  h-[2px]
-                  bg-cyan-400
-                  transition-all
-                  duration-300
-                  ${
-                    active === link.href
-                      ? "w-full"
-                      : "w-0"
-                  }
-                `}
-                />
+               {active === link.href && (
+  <motion.span
+    layoutId="active-link"
+    className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-cyan-400"
+    transition={{
+      type: "spring",
+      stiffness: 400,
+      damping: 30,
+    }}
+  />
+)}
 
               </a>
 
