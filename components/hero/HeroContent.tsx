@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+
 import HeroButtons from "./HeroButtons";
 import HeroSocials from "./HeroSocials";
+import HeroStats from "./HeroStats";
 
 export default function HeroContent() {
   return (
@@ -11,9 +14,13 @@ export default function HeroContent() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
     >
+      {/* Greeting */}
+
       <p className="text-cyan-400 text-lg font-medium mb-4">
         👋 Hello, I'm
       </p>
+
+      {/* Name */}
 
       <h1 className="text-5xl md:text-7xl font-black leading-tight">
         ISMAIL
@@ -21,13 +28,43 @@ export default function HeroContent() {
         <span className="text-cyan-400">OUCHRAA</span>
       </h1>
 
-      <h2 className="mt-8 text-3xl font-semibold">
-        Software Engineer
-      </h2>
+      {/* Typing Animation */}
 
-      <h3 className="mt-3 text-xl text-gray-300">
-        Full Stack Developer • AI Enthusiast • DevOps
-      </h3>
+      <div className="mt-8">
+        <TypeAnimation
+          sequence={[
+            "Software Engineer",
+            1800,
+
+            "Full Stack Developer",
+            1800,
+
+            "AI Enthusiast",
+            1800,
+
+            "Backend Developer",
+            1800,
+
+            "Frontend Developer",
+            1800,
+
+            "DevOps Learner",
+            1800,
+          ]}
+          wrapper="h2"
+          speed={45}
+          repeat={Infinity}
+          className="
+            text-3xl
+            md:text-4xl
+            font-bold
+            text-white
+            min-h-[50px]
+          "
+        />
+      </div>
+
+      {/* Description */}
 
       <p className="mt-8 text-gray-400 leading-8 max-w-xl">
         Passionate about building scalable web applications,
@@ -39,7 +76,6 @@ export default function HeroContent() {
       {/* Tech Stack */}
 
       <div className="flex flex-wrap gap-3 mt-10">
-
         {[
           "React",
           "Next.js",
@@ -61,22 +97,31 @@ export default function HeroContent() {
               border-cyan-500/30
               text-cyan-300
               text-sm
+              transition
               hover:bg-cyan-500
               hover:text-white
-              transition
             "
           >
             {tech}
           </span>
         ))}
-
       </div>
+
+      {/* Buttons */}
 
       <div className="mt-12">
         <HeroButtons />
       </div>
 
-      <HeroSocials />
+      {/* Stats */}
+
+      <HeroStats />
+
+      {/* Social */}
+
+      <div className="mt-10">
+        <HeroSocials />
+      </div>
     </motion.div>
   );
 }

@@ -1,88 +1,51 @@
-export const featuredProjects = [
-  {
-    title: "DisasterTrack",
-    subtitle: "AI-powered Natural Disaster Monitoring Platform",
-    image: "/images/projects/disastertrack.png",
-    description:
-      "AI-powered platform for monitoring earthquakes, floods and wildfires across Morocco using real-time APIs, interactive maps and intelligent risk prediction.",
-    technologies: [
-      "JavaScript",
-      "Python",
-      "MongoDB",
-      "Machine Learning",
-      "REST API",
-    ],
-    github: "https://github.com/ismailouchraa/suivi-catastrophes-maroc",
-  },
-
-  {
-    title: "Chicken Farm ERP",
-    subtitle: "Enterprise Resource Planning System",
-    image: "/images/projects/chicken-erp.png",
-    description:
-      "Enterprise Resource Planning solution for poultry farm management including livestock, egg production, finance, contracts and business analytics.",
-    technologies: [
-      "Java",
-      "Java Swing",
-      "HTML",
-      "CSS",
-    ],
-    github: "#",
-  },
-];
-
 export const projects = [
   {
-    title: "Course Manager",
-    image: "/images/projects/course-manager.png",
+    title: "DisasterTrack",
+    subtitle: "AI Disaster Monitoring Platform",
     description:
-      "Full-stack web application for managing courses and students in a university environment.",
-    technologies: [
-      "JavaScript",
-      "HTML",
-      "CSS",
-    ],
-    github: "#",
-  },
+      "An intelligent platform for monitoring natural disasters in Morocco using Artificial Intelligence. It provides prediction, visualization and real-time monitoring for earthquakes, floods and wildfires.",
 
-  {
-    title: "SysMon-cpp",
-    image: "/images/projects/sysmon.png",
-    description:
-      "Linux system monitoring tool inspired by top and htop for real-time CPU, RAM and process monitoring.",
-    technologies: [
-      "C++",
-      "Linux",
-      "CLI",
-      "OOP",
-    ],
-    github: "#",
-  },
+    image: "/images/projects/disastertrack.png",
 
-  {
-    title: "University Course Website",
-    image: "/images/projects/university.png",
-    description:
-      "University platform for organizing academic departments, modules and educational resources.",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
-    github: "#",
-  },
+    github: "https://github.com/ismailouchraa/suivi-catastrophes-maroc",
 
-  {
-    title: "Portfolio Website",
-    image: "/images/projects/portfolio.png",
-    description:
-      "Modern responsive portfolio built with Next.js, TypeScript, Tailwind CSS and Framer Motion.",
+    demo: "#",
+
+    featured: true,
+
     technologies: [
+      "React",
       "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
+      "Django",
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "MongoDB",
+      "AI",
     ],
-    github: "https://github.com/ismailouchraa/ismail-portfolio",
+  },
+
+  {
+    title: "EcoColis",
+
+    subtitle: "Collaborative Delivery Platform",
+
+    description:
+      "A smart platform connecting travelers with people who need parcel delivery between Moroccan cities.",
+
+    image: "/images/projects/ecocolis.png",
+
+    github: "#",
+
+    demo: "#",
+
+    featured: false,
+
+    technologies: [
+      "React",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+    ],
   },
 ];

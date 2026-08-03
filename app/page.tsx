@@ -9,7 +9,8 @@ import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import TechStack from "@/components/sections/TechStack";
-
+import ScrollToTop from "@/components/layout/ScrollToTop";
+import GitHub from "@/components/sections/GitHub";
 export default function Home() {
   return (
     <>
@@ -19,11 +20,14 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <GitHub />
       <Experience />
       <Education />
       <Contact />
       <Footer />
       <TechStack />
+      <ScrollToTop />
+      
     </>
   );
 }
