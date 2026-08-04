@@ -32,3 +32,14 @@ html {
 body {
   overflow-x: hidden;
 }
+
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea {
+    cursor: none;
+  }
+}

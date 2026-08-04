@@ -11,10 +11,18 @@ import ScrollProgress from "@/components/layout/ScrollProgress";
 import TechStack from "@/components/sections/TechStack";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import GitHub from "@/components/sections/GitHub";
+import AnimatedBackground from "@/components/layout/AnimatedBackground";
+import CustomCursor from "@/components/layout/CustomCursor";
+import MouseGlow from "@/components/layout/MouseGlow";
+import ParticlesBackground from "@/components/layout/ParticlesBackground";
+
 export default function Home() {
   return (
     <>
       <Navbar />
+      <AnimatedBackground />
+      <CustomCursor />
+      <MouseGlow />
       <ScrollProgress />
       <Hero />
       <About />
@@ -27,7 +35,7 @@ export default function Home() {
       <Footer />
       <TechStack />
       <ScrollToTop />
-      
+      <ParticlesBackground />
     </>
   );
 }

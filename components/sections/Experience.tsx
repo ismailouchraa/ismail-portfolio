@@ -1,23 +1,60 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  GraduationCap,
+  BrainCircuit,
+  Briefcase,
+  ServerCog,
+} from "lucide-react";
+
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 
 const experiences = [
   {
-    title: "Final Year Project (PFE)",
-    company: "DisasterTrack",
-    period: "2026",
+    year: "2026",
+    title: "Software Engineering Graduate",
+    company: "Polydisciplinary Faculty of Taroudant",
     description:
-      "Designed and developed an AI-powered web application for monitoring natural disasters in Morocco. Integrated external APIs, Artificial Intelligence, MongoDB, Python and modern web technologies.",
+      "Bachelor's Degree in Computer Science with strong foundations in Software Engineering, Artificial Intelligence and Full Stack Development.",
+    icon: GraduationCap,
   },
+
   {
-    title: "Academic Software Projects",
-    company: "Personal & University Projects",
-    period: "2023 - 2026",
+    year: "2026",
+    title: "DisasterTrack",
+    company: "Graduation Project (PFE)",
     description:
-      "Developed several software projects including an ERP system, Course Manager, University Course Website, Linux System Monitor (C++) and a modern developer portfolio.",
+      "Designed and developed an AI-powered natural disaster detection and alert system for Morocco using Django, React, Machine Learning and Docker.",
+    icon: BrainCircuit,
+  },
+
+  {
+    year: "2025",
+    title: "Full Stack Development",
+    company: "Personal Projects",
+    description:
+      "Built modern web applications using React, Next.js, Django, Node.js, PostgreSQL and MongoDB following clean architecture principles.",
+    icon: Briefcase,
+  },
+
+  {
+    year: "2025",
+    title: "DevOps Journey",
+    company: "Docker • Kubernetes • Jenkins",
+    description:
+      "Learned Docker, Kubernetes, Jenkins, Maven, Git and Linux while building CI/CD workflows and deploying scalable applications.",
+    icon: ServerCog,
+  },
+
+  {
+    year: "2023",
+    title: "Started Computer Science",
+    company: "Polydisciplinary Faculty of Taroudant",
+    description:
+      "Started my academic journey in Computer Science and discovered my passion for software engineering and artificial intelligence.",
+    icon: GraduationCap,
   },
 ];
 
@@ -31,50 +68,83 @@ export default function Experience() {
 
         <SectionTitle
           subtitle="EXPERIENCE"
-          title="My Experience"
-          description="Projects and practical experience gained throughout my academic journey."
+          title="Journey & Experience"
+          description="My academic and technical journey in software engineering, artificial intelligence and modern web development."
         />
 
-        <div className="space-y-8">
+        <div className="relative max-w-5xl mx-auto">
 
-          {experiences.map((exp, index) => (
+          {/* Vertical Line */}
 
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.2,
-              }}
-              viewport={{ once: true }}
-              className="rounded-3xl border border-cyan-500/20 bg-white/5 backdrop-blur-lg p-8"
-            >
-              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+          <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-cyan-500/30"></div>
 
-                <div>
-                  <h3 className="text-2xl font-bold">
-                    {exp.title}
-                  </h3>
+          <div className="space-y-14">
 
-                  <p className="text-cyan-400 mt-2">
-                    {exp.company}
-                  </p>
-                </div>
+            {experiences.map((item, index) => {
+              const Icon = item.icon;
 
-                <span className="text-gray-400 mt-4 md:mt-0">
-                  {exp.period}
-                </span>
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.12,
+                  }}
+                  className="relative flex gap-8"
+                >
+                  {/* Timeline Dot */}
 
-              </div>
+                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-cyan-500 bg-[#08101f] shadow-[0_0_25px_rgba(6,182,212,.4)]">
 
-              <p className="mt-6 text-gray-400 leading-8">
-                {exp.description}
-              </p>
+                    <Icon
+                      size={22}
+                      className="text-cyan-400"
+                    />
 
-            </motion.div>
+                  </div>
 
-          ))}
+                  {/* Card */}
+
+                  <div
+                    className="
+                      flex-1
+                      rounded-3xl
+                      border
+                      border-cyan-500/20
+                      bg-white/5
+                      p-8
+                      backdrop-blur-xl
+                      transition-all
+                      duration-300
+                      hover:border-cyan-400
+                      hover:shadow-[0_0_30px_rgba(6,182,212,.18)]
+                    "
+                  >
+                    <span className="text-cyan-400 text-sm font-semibold">
+                      {item.year}
+                    </span>
+
+                    <h3 className="mt-2 text-2xl font-bold">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-1 text-cyan-300">
+                      {item.company}
+                    </p>
+
+                    <p className="mt-5 text-gray-400 leading-8">
+                      {item.description}
+                    </p>
+
+                  </div>
+                </motion.div>
+              );
+            })}
+
+          </div>
 
         </div>
 
