@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaStar } from "react-icons/fa";
 
 type ProjectProps = {
@@ -25,24 +26,47 @@ export default function ProjectCard({
   technologies,
 }: ProjectProps) {
   return (
-    <div
+    <motion.div
+      whileHover={{
+        y: -10,
+        rotateX: 2,
+        rotateY: -2,
+      }}
+      transition={{
+        duration: 0.35,
+      }}
       className="
+        group
+        relative
+        overflow-hidden
         rounded-3xl
         border
         border-cyan-500/20
         bg-white/5
         backdrop-blur-xl
-        overflow-hidden
-        transition-all
-        duration-500
-        hover:border-cyan-400
-        hover:-translate-y-2
-        hover:shadow-[0_0_40px_rgba(6,182,212,.2)]
+        shadow-lg
       "
     >
+      {/* Glow */}
+
+      <div
+        className="
+          absolute
+          inset-0
+          opacity-0
+          transition
+          duration-500
+          group-hover:opacity-100
+          bg-gradient-to-br
+          from-cyan-500/10
+          via-transparent
+          to-blue-500/10
+        "
+      />
+
       {/* Image */}
 
-      <div className="relative overflow-hidden group">
+      <div className="relative overflow-hidden">
 
         <Image
           src={image}
@@ -53,25 +77,61 @@ export default function ProjectCard({
             h-64
             w-full
             object-cover
-            transition
-            duration-500
-            group-hover:scale-105
+            transition-all
+            duration-700
+            group-hover:scale-110
+          "
+        />
+
+        <div
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-black/70
+            via-transparent
+            to-transparent
           "
         />
 
         {featured && (
-          <div className="absolute top-5 left-5 flex items-center gap-2 rounded-full bg-cyan-500 px-4 py-2 text-sm font-bold text-black">
+          <div
+            className="
+              absolute
+              left-5
+              top-5
+              flex
+              items-center
+              gap-2
+              rounded-full
+              bg-cyan-500
+              px-4
+              py-2
+              text-sm
+              font-bold
+              text-black
+              shadow-lg
+            "
+          >
             <FaStar />
             Featured
           </div>
         )}
+
       </div>
 
       {/* Content */}
 
-      <div className="p-8">
+      <div className="relative z-10 p-8">
 
-        <h2 className="text-3xl font-bold">
+        <h2
+          className="
+            text-3xl
+            font-bold
+            transition
+            group-hover:text-cyan-400
+          "
+        >
           {title}
         </h2>
 
@@ -79,26 +139,32 @@ export default function ProjectCard({
           {subtitle}
         </p>
 
-        <p className="mt-6 text-gray-400 leading-8">
+        <p className="mt-6 leading-8 text-gray-400">
           {description}
         </p>
 
         {/* Technologies */}
 
-        <div className="flex flex-wrap gap-3 mt-8">
+        <div className="mt-8 flex flex-wrap gap-3">
 
           {technologies.map((tech) => (
             <span
               key={tech}
               className="
-                px-4
-                py-2
                 rounded-full
-                bg-cyan-500/10
                 border
                 border-cyan-500/20
-                text-cyan-300
+                bg-cyan-500/10
+                px-4
+                py-2
                 text-sm
+                text-cyan-300
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-cyan-400
+                hover:bg-cyan-500
+                hover:text-white
               "
             >
               {tech}
@@ -109,7 +175,7 @@ export default function ProjectCard({
 
         {/* Buttons */}
 
-        <div className="flex gap-4 mt-10">
+        <div className="mt-10 flex flex-wrap gap-4">
 
           <a
             href={github}
@@ -124,7 +190,9 @@ export default function ProjectCard({
               px-6
               py-3
               font-semibold
-              transition
+              transition-all
+              duration-300
+              hover:scale-105
               hover:bg-cyan-400
             "
           >
@@ -146,7 +214,9 @@ export default function ProjectCard({
               px-6
               py-3
               font-semibold
-              transition
+              transition-all
+              duration-300
+              hover:scale-105
               hover:bg-cyan-500
             "
           >
@@ -157,6 +227,6 @@ export default function ProjectCard({
         </div>
 
       </div>
-    </div>
+    </motion.div>
   );
 }

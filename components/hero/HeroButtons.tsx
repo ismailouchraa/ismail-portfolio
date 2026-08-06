@@ -1,65 +1,120 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 
 export default function HeroButtons() {
   return (
-    <div className="flex flex-wrap gap-5 mt-12">
-
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.8 }}
+      className="mt-12 flex flex-wrap gap-5"
+    >
       {/* Download CV */}
 
       <a
-        href="/cv/Ismail_Ouchraa_CV.pdf"
+        href="/Ismail_Ouchraa_CV.pdf"
         download
         className="
+          group
           inline-flex
           items-center
           gap-3
+          rounded-2xl
+          bg-cyan-500
           px-8
           py-4
-          rounded-xl
-          bg-cyan-500
-          text-white
           font-semibold
-          shadow-lg
+          text-black
+          shadow-xl
           shadow-cyan-500/30
           transition-all
           duration-300
+          hover:scale-105
           hover:bg-cyan-400
-          hover:-translate-y-1
-          hover:shadow-cyan-500/50
         "
       >
-        <FaDownload />
+        <FaDownload
+          className="
+            transition-transform
+            duration-300
+            group-hover:-translate-y-1
+          "
+        />
+
         Download CV
       </a>
 
-      {/* View Projects */}
+      {/* Contact */}
+
+      <a
+        href="#contact"
+        className="
+          group
+          inline-flex
+          items-center
+          gap-3
+          rounded-2xl
+          border
+          border-cyan-500/30
+          bg-white/5
+          px-8
+          py-4
+          font-semibold
+          backdrop-blur-xl
+          transition-all
+          duration-300
+          hover:scale-105
+          hover:border-cyan-400
+          hover:bg-cyan-500/10
+        "
+      >
+        Contact Me
+
+        <FaArrowRight
+          className="
+            transition-transform
+            duration-300
+            group-hover:translate-x-1
+          "
+        />
+      </a>
+
+      {/* Projects */}
 
       <a
         href="#projects"
         className="
+          group
           inline-flex
           items-center
           gap-3
+          rounded-2xl
+          border
+          border-white/10
+          bg-white/5
           px-8
           py-4
-          rounded-xl
-          border-2
-          border-cyan-500
-          text-white
           font-semibold
+          backdrop-blur-xl
           transition-all
           duration-300
-          hover:bg-cyan-500
+          hover:scale-105
           hover:border-cyan-400
-          hover:-translate-y-1
+          hover:bg-cyan-500/10
         "
       >
         View Projects
-        <FaArrowRight />
-      </a>
 
-    </div>
+        <FaArrowRight
+          className="
+            transition-transform
+            duration-300
+            group-hover:translate-x-1
+          "
+        />
+      </a>
+    </motion.div>
   );
 }

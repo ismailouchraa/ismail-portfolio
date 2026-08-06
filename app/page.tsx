@@ -15,27 +15,34 @@ import AnimatedBackground from "@/components/layout/AnimatedBackground";
 import CustomCursor from "@/components/layout/CustomCursor";
 import MouseGlow from "@/components/layout/MouseGlow";
 import ParticlesBackground from "@/components/layout/ParticlesBackground";
+import Loader from "@/components/layout/Loader";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <AnimatedBackground />
-      <CustomCursor />
-      <MouseGlow />
-      <ScrollProgress />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <GitHub />
-      <Experience />
-      <Education />
-      <Contact />
-      <Footer />
-      <TechStack />
-      <ScrollToTop />
-      <ParticlesBackground />
-    </>
+   <>
+  <Navbar />
+  <Loader />
+
+  <AnimatedBackground />
+  <ParticlesBackground />
+
+  <CustomCursor />
+  <MouseGlow />
+
+  <ScrollProgress />
+
+  <Hero />
+  <About />
+  <Skills />
+  <Projects />
+  <GitHub />
+  <Experience />
+  <Education />
+  <Contact />
+  <TechStack />
+  <Footer />
+
+  <ScrollToTop />
+</>
   );
 }

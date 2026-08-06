@@ -30,3 +30,20 @@ export default function HeroSocials() {
     </div>
   );
 }
+<div
+className="
+absolute
+bottom-10
+left-1/2
+-translate-x-1/2
+animate-bounce
+"
+>
+
+↓
+
+<p className="text-sm text-gray-400 mt-2">
+Scroll Down
+</p>
+
+</div>
