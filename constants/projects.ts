@@ -1,50 +1,62 @@
 export const projects = [
   {
-    title: "DisasterTrack",
-    subtitle: "AI Disaster Monitoring Platform",
+    title: "AI DisasterTrack",
+
+    subtitle: "AI-Powered Disaster Detection Platform",
+
     description:
-      "An intelligent platform for monitoring natural disasters in Morocco using Artificial Intelligence. It provides prediction, visualization and real-time monitoring for earthquakes, floods and wildfires.",
+      "An intelligent platform for monitoring natural disasters across Morocco. It provides real-time visualization, AI-powered prediction models, interactive maps and emergency alerts for earthquakes, floods and wildfires.",
 
     image: "/images/projects/disastertrack.png",
 
-    github: "https://github.com/ismailouchraa/suivi-catastrophes-maroc",
+    github:
+      "https://github.com/ismailouchraa/suivi-catastrophes-maroc",
 
     demo: "#",
 
     featured: true,
 
+    year: "2026",
+
+    badge: "AI PROJECT",
+
     technologies: [
       "React",
-      "Next.js",
       "Django",
       "Python",
-      "Docker",
-      "Kubernetes",
       "MongoDB",
-      "AI",
+      "Machine Learning",
+      "REST API",
+      "Leaflet",
     ],
   },
 
   {
-    title: "EcoColis",
+    title: "Farm Management System",
 
-    subtitle: "Collaborative Delivery Platform",
+    subtitle: "Smart Agriculture Platform",
 
     description:
-      "A smart platform connecting travelers with people who need parcel delivery between Moroccan cities.",
+      "A modern web platform that helps farmers efficiently manage crops, livestock, inventory, employees and farm operations through a centralized dashboard with real-time analytics.",
 
-    image: "/images/projects/ecocolis.png",
+    image: "/images/projects/farm-management-system.png",
 
-    github: "#",
+    github: "https://github.com/ismailouchraa",
 
     demo: "#",
 
     featured: false,
 
+    year: "2025",
+
+    badge: "WEB PLATFORM",
+
     technologies: [
       "React",
-      "Spring Boot",
-      "PostgreSQL",
+      "Django",
+      "Python",
+      "MongoDB",
+      "REST API",
       "Docker",
     ],
   },

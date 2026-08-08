@@ -40,6 +40,6 @@ body {
   button,
   input,
   textarea {
-    cursor: none;
+    cursor: auto;
   }
 }
